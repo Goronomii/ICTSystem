@@ -1,0 +1,27 @@
+
+
+
+#closebutton {
+    -fx-background-color: none;
+    -fx-background-image: url("/image/close.png");
+    -fx-background-size: 20px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    
+}
+#closebutton:hover {
+    -fx-background-color: #db0214;
+}
+#minimizebutton {
+    -fx-background-color: none;
+    -fx-background-image: url("/image/minimize-signwhite.png");
+    -fx-background-size: 20px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    
+}   
+#minimizebutton:hover {
+    -fx-background-color: #4f4c4c;
+    
+}
+

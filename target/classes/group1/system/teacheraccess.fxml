@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="359.0" prefWidth="441.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="group1.system.adminaccess">
+   <children>
+      <TextField fx:id="nameteachertextfield" layoutX="67.0" layoutY="46.0" prefHeight="25.0" prefWidth="307.0" promptText="Teachers Name" />
+      <JFXComboBox fx:id="sectionCombobox" layoutX="67.0" layoutY="96.0" prefHeight="25.0" prefWidth="307.0" promptText="Section" />
+      <JFXComboBox fx:id="Semestercombobox" layoutX="67.0" layoutY="155.0" prefHeight="25.0" prefWidth="307.0" promptText="Semesters" />
+      <JFXComboBox fx:id="SubjectCombobox" layoutX="67.0" layoutY="210.0" prefHeight="25.0" prefWidth="307.0" promptText="Subject" />
+      <JFXButton layoutX="67.0" layoutY="266.0" onAction="#insertTeacherSectionSubject" prefHeight="38.0" prefWidth="131.0" style="-fx-background-color: black;" text="INSERT" textFill="WHITE">
+         <font>
+            <Font name="Nirmala UI Bold" size="19.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

@@ -1,0 +1,56 @@
+
+
+
+.imageviewbackground {
+-fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 20, 0, 10, 10);
+}
+.buttonlogin:hover {
+    -fx-background-image: url("/image/nexthover.png");
+}
+#closebutton {
+    -fx-background-color: none;
+    -fx-background-image: url("/image/close.png");
+    -fx-background-size: 20px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+#closebutton:hover {
+    -fx-background-color: #db0214;
+    -fx-background-image: url("/image/closehover.png");
+}
+
+#minimizebutton {
+    -fx-background-color: none;
+    -fx-background-image: url("/image/minimize-signwhite.png");
+    -fx-background-size: 20px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+#minimizebutton:hover {
+    -fx-background-color: #cccccc;
+}
+
+/* Additional styles for changed state */
+#closebutton.slid {
+    -fx-background-image: url("/image/closewhite.png"); /* New image for close button */
+}
+
+#minimizebutton.slid {
+    -fx-background-image: url("/image/minimize-trulywhite.png"); /* New image for minimize button */
+}
+
+#usertext {
+    -fx-background-color: none;
+    -fx-background-radius:  1em;
+   -fx-border-width: 0 0 1px 0;  /* Set border width only for the bottom */
+    -fx-border-color: transparent transparent black transparent; 
+    
+}
+#passtext {
+    -fx-background-color: none;
+    -fx-background-radius:  1em;
+    -fx-border-width: 0 0 1px 0;  /* Set border width only for the bottom */
+    -fx-border-color: transparent transparent black transparent; 
+}

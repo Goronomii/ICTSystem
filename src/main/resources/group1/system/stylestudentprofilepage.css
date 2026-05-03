@@ -1,0 +1,37 @@
+
+
+
+#closebutton {
+    -fx-background-color: none;
+    -fx-background-image: url("/image/close.png");
+    -fx-background-size: 20px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    
+}
+#closebutton:hover {
+    -fx-background-color: #db0214;
+}
+#minimizebutton {
+    -fx-background-color: none;
+    -fx-background-image: url("/image/minimize-signwhite.png");
+    -fx-background-size: 20px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    
+}   
+#minimizebutton:hover {
+    -fx-background-color: #4f4c4c;
+    
+}
+
+.menuItem1:hover {
+     -fx-border-color: #2456c9;
+    -fx-border-width: 0px 0px 1px 0px;
+}
+.menuItem2{
+      -fx-background-color: #e6e6e8;
+    -fx-border-color: #2456c9;
+      -fx-border-width: 0px 0px 1px 0px;
+}
+

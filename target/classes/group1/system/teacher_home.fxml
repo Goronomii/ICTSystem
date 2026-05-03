@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" stylesheets="@styleteacherhomepage.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="group1.system.TeacherhomepageController">
+   <children>
+      <Pane layoutX="1108.0" layoutY="-2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="33.0" prefWidth="92.0">
+         <children>
+            <Button id="minimizebutton" fx:id="minimizebutton" layoutX="18.0" layoutY="2.0" mnemonicParsing="false" onMouseClicked="#minimize_clicked" prefHeight="35.0" prefWidth="37.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button id="closebutton" fx:id="exit" layoutX="55.0" layoutY="2.0" mnemonicParsing="false" onAction="#close" prefHeight="35.0" prefWidth="37.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </Pane>
+      <Label layoutX="14.0" layoutY="60.0" prefHeight="62.0" prefWidth="177.0" text="Welcome,">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label fx:id="namelabel" layoutX="172.0" layoutY="60.0" prefHeight="62.0" prefWidth="446.0">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <HBox prefHeight="52.0" prefWidth="1120.0">
+         <children>
+            <JFXButton fx:id="homebutton" buttonType="RAISED" prefHeight="52.0" prefWidth="691.0" styleClass="menuItem1" text="HOME">
+               <graphic>
+                  <ImageView fitHeight="36.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../image/dashboard.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="Submissionbutton" buttonType="RAISED" onAction="#goToSubmission" prefHeight="52.0" prefWidth="691.0" styleClass="menuItem2" text="SUBMISSION">
+               <graphic>
+                  <ImageView fitHeight="36.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../image/assessment.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </HBox>
+      <JFXButton fx:id="sectionICTA" layoutX="116.0" layoutY="216.0" onAction="#sectionICTAPressed" prefHeight="284.0" prefWidth="286.0" style="-fx-background-color: #84b3cf;" styleClass="sectionbuttons" text="ICT-A">
+         <font>
+            <Font name="System Bold" size="34.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="sectionICTB" layoutX="432.0" layoutY="216.0" onAction="#sectionICTBPressed" prefHeight="284.0" prefWidth="286.0" style="-fx-background-color: #84b3cf;" styleClass="sectionbuttons" text="ICT-B">
+         <font>
+            <Font name="System Bold" size="34.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="sectionICTC" layoutX="750.0" layoutY="216.0" onAction="#sectionICTCPressed" prefHeight="284.0" prefWidth="286.0" style="-fx-background-color: #84b3cf;" styleClass="sectionbuttons" text="ICT-C">
+         <font>
+            <Font name="System Bold" size="34.0" />
+         </font>
+      </JFXButton>
+      <ImageView fx:id="logout" accessibleRole="BUTTON" fitHeight="33.0" fitWidth="37.0" layoutX="1154.0" layoutY="653.0" onMouseClicked="#logout" pickOnBounds="true" preserveRatio="true" styleClass="logoutbutton">
+         <image>
+            <Image url="@../../image/sign-out-alt.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <BorderPane layoutX="908.0" layoutY="75.0" prefHeight="35.0" prefWidth="200.0" style="-fx-background-color: black;">
+         <right>
+            <Text fx:id="dateTimeText" fill="WHITE" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="274.13671875" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+         </right>
+      </BorderPane>
+   </children>
+</AnchorPane>

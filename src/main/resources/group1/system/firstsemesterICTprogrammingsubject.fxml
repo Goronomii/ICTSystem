@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1170.0" stylesheets="@semesterhub.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="group1.system.firstsemesterICTSubjectController">
+   <children>
+      <Pane layoutX="-2.0" layoutY="-2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="33.0" prefWidth="1177.0">
+         <children>
+            <Button id="minimizebutton" fx:id="minimizebutton" layoutX="1090.0" layoutY="-1.0" mnemonicParsing="false" onMouseClicked="#minimize_clicked" prefHeight="35.0" prefWidth="38.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button id="closebutton" fx:id="exit" layoutX="1128.0" layoutY="2.0" mnemonicParsing="false" onAction="#close" prefHeight="35.0" prefWidth="45.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutX="1.0" layoutY="34.0" prefHeight="568.0" prefWidth="1170.0">
+         <children>
+            <JFXButton fx:id="programmingbutton" layoutX="49.0" layoutY="11.0" onAction="#loadProgramming" prefHeight="46.0" prefWidth="184.0" style="-fx-background-color: #6885e3;" text="COMPUTER PROGRAMMING" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="filipinobutton" layoutX="267.0" layoutY="11.0" onAction="#loadfilipino" prefHeight="46.0" prefWidth="184.0" style="-fx-background-color: #6885e3;" text="FILIPINO SA PILING LARANG" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="philosophybutton" alignment="CENTER" contentDisplay="CENTER" layoutX="493.0" layoutY="11.0" onAction="#loadphilosophy" prefHeight="46.0" prefWidth="184.0" style="-fx-background-color: #6885e3;" text="PHILOSOPHY" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="literaturebutton" layoutX="712.0" layoutY="11.0" onAction="#loadliterature" prefHeight="46.0" prefWidth="184.0" style="-fx-background-color: #6885e3;" text="21ST CENTURY LITERATURE" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="researchbutton" layoutX="942.0" layoutY="11.0" onAction="#loadResearch" prefHeight="46.0" prefWidth="184.0" style="-fx-background-color: #6885e3;" text="PRACTICAL RESEARCH" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <Pane fx:id="filipinoPane" layoutX="49.0" layoutY="75.0" prefHeight="443.0" prefWidth="1054.0" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 6,0,0,0); -fx-background-color: #fff; -fx-background-radius: 8px;" visible="false">
+               <children>
+                  <Pane layoutX="9.0" layoutY="7.0" prefHeight="422.0" prefWidth="1087.0">
+                     <children>
+                        <Label alignment="CENTER" layoutX="349.0" layoutY="-3.0" prefHeight="33.0" prefWidth="359.0" text="FILIPINO SA PILING LARANG">
+                           <font>
+                              <Font name="System Bold" size="23.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <TableView id="assignmenttable" fx:id="assignmentsTablefilipino" layoutX="27.0" layoutY="33.0" prefHeight="253.0" prefWidth="511.0">
+                     <columns>
+                        <TableColumn fx:id="assignmentTitleColumnfilipino" prefWidth="248.0" text="ASSIGNMENT" />
+                        <TableColumn fx:id="assignmentCheckedColumnfilipino" minWidth="0.0" prefWidth="180.0" text="CHECKED" />
+                     </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+                  <TableView id="activitiestable" fx:id="activitiesTablefilipino" layoutX="535.0" layoutY="33.0" prefHeight="253.0" prefWidth="511.0">
+                     <columns>
+                        <TableColumn fx:id="activityTitleColumnfilipino" prefWidth="286.0" text="ACTIVITIES" />
+                        <TableColumn fx:id="activityCheckedColumnfilipino" minWidth="0.0" prefWidth="237.0" text="CHECKED" />
+                     </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+                  <TableView id="performancetable" fx:id="performanceTablefilipino" layoutX="27.0" layoutY="286.0" prefHeight="143.0" prefWidth="1019.0">
+                     <columns>
+                        <TableColumn fx:id="performanceTitleColumnfilipino" prefWidth="508.0" text="PERFORMANCE TASK" />
+                        <TableColumn fx:id="performanceCheckedColumnfilipino" minWidth="0.0" prefWidth="509.0" text="CHECKED" />
+                     </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </children>
+               <styleClass>
+                  <String fx:value="shadow" />
+                  <String fx:value="white-bg" />
+               </styleClass>
+            </Pane>
+            <Pane fx:id="researchpane" layoutX="49.0" layoutY="75.0" prefHeight="443.0" prefWidth="1054.0" style="-fx-background-color: #fff; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 6,0,0,0); -fx-background-radius: 8px;" visible="false">
+               <children>
+                  <Pane prefHeight="422.0" prefWidth="1087.0">
+                     <children>
+                        <Label alignment="CENTER" layoutX="222.0" prefHeight="34.0" prefWidth="624.0" text="PRACTICAL RESEARCH">
+                           <font>
+                              <Font name="System Bold" size="23.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <TableView id="assignmenttable" fx:id="assignmentsTablepracresearch" layoutX="27.0" layoutY="33.0" prefHeight="253.0" prefWidth="511.0">
+                     <columns>
+                        <TableColumn fx:id="assignmentTitleColumnpracresearch" prefWidth="248.0" text="ASSIGNMENT" />
+                        <TableColumn fx:id="assignmentCheckedColumnpracresearch" minWidth="0.0" prefWidth="180.0" text="CHECKED" />
+                     </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+                  <TableView id="activitiestable" fx:id="activitiesTablepracresearch" layoutX="535.0" layoutY="33.0" prefHeight="253.0" prefWidth="511.0">
+                     <columns>
+                        <TableColumn fx:id="activityTitleColumnpracresearch" prefWidth="272.0" text="ACTIVITIES" />
+                        <TableColumn fx:id="activityCheckedColumnpracresearch" minWidth="0.0" prefWidth="237.0" text="CHECKED" />
+                     </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+                  <TableView id="performancetable" fx:id="performanceTablepracresearch" layoutX="27.0" layoutY="286.0" prefHeight="143.0" prefWidth="1019.0">
+                     <columns>
+                        <TableColumn fx:id="performanceTitleColumnpracresearch" prefWidth="508.0" text="PERFORMANCE TASK" />
+                        <TableColumn fx:id="performanceCheckedColumnpracresearch" minWidth="0.0" prefWidth="509.0" text="CHECKED" />
+                     </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </children>
+            </Pane>
+            <Pane fx:id="programmingPane" layoutX="49.0" layoutY="75.0" prefHeight="443.0" prefWidth="1054.0" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 6,0,0,0);; -fx-background-color: #fff; -fx-background-radius: 8px;" visible="false">
+               <children>
+                  <Pane layoutX="9.0" layoutY="7.0" prefHeight="422.0" prefWidth="1087.0">
+                     <children>
+                        <Label alignment="CENTER" layoutX="364.0" layoutY="-9.0" prefHeight="33.0" prefWidth="359.0" text="PROGRAMMING">
+                           <font>
+                              <Font name="System Bold" size="23.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <TableView id="assignmentsTable" fx:id="assignmentsTablecomprog" layoutX="27.0" layoutY="33.0" prefHeight="253.0" prefWidth="511.0">
+                     <columns>
+                        <TableColumn fx:id="assignmentTitleColumncomprog" prefWidth="248.0" text="ASSIGNMENT" />
+                        <TableColumn fx:id="assignmentCheckedColumncomprog" minWidth="0.0" prefWidth="180.0" text="CHECKED" />
+                     </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+                  <TableView id="activitiestable" fx:id="activitiesTablecomprog" layoutX="535.0" layoutY="33.0" prefHeight="253.0" prefWidth="511.0">
+                     <columns>
+                        <TableColumn fx:id="activityTitleColumncomprog" prefWidth="241.0" text="ACTIVITIES" />
+                        <TableColumn fx:id="activityCheckedColumncomprog" minWidth="0.0" prefWidth="229.0" text="CHECKED" />
+                     </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+                  <TableView id="performancetable" fx:id="performanceTablecomprog" layoutX="27.0" layoutY="286.0" prefHeight="143.0" prefWidth="1019.0">
+                     <columns>
+                        <TableColumn fx:id="performanceTitleColumncomprog" prefWidth="509.0" text="PERFORMANCE TASK" />
+                        <TableColumn fx:id="performanceCheckedColumncomprog" minWidth="0.0" prefWidth="508.0" text="CHECKED" />
+                     </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </children>
+            </Pane>
+            <Pane fx:id="philosophypane" layoutX="49.0" layoutY="75.0" prefHeight="435.0" prefWidth="1054.0" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 6,0,0,0); -fx-background-color: #fff; -fx-background-radius: 8px;" visible="false">
+               <children>
+                  <Pane prefHeight="443.0" prefWidth="1087.0">
+                     <children>
+                        <Label alignment="CENTER" layoutX="364.0" prefHeight="34.0" prefWidth="359.0" text="PHILOSOPHY">
+                           <font>
+                              <Font name="System Bold" size="23.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <TableView id="assignmenttable" fx:id="assignmentsTablephilosophy" layoutX="27.0" layoutY="33.0" prefHeight="253.0" prefWidth="511.0">
+                     <columns>
+                        <TableColumn fx:id="assignmentTitleColumnphilosophy" prefWidth="248.0" text="ASSIGNMENT" />
+                        <TableColumn fx:id="assignmentCheckedColumnphilosophy" minWidth="0.0" prefWidth="180.0" text="CHECKED" />
+                     </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+                  <TableView id="activitiestable" fx:id="activitiesTablephilosophy" layoutX="535.0" layoutY="33.0" prefHeight="253.0" prefWidth="511.0">
+                     <columns>
+                        <TableColumn fx:id="activityTitleColumnphilosophy" prefWidth="147.0" text="ACTIVITIES" />
+                        <TableColumn fx:id="activityCheckedColumnphilosophy" minWidth="0.0" prefWidth="285.0" text="CHECKED" />
+                     </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+                  <TableView id="performancetable" fx:id="performanceTablephilosophy" layoutX="27.0" layoutY="286.0" prefHeight="143.0" prefWidth="1019.0">
+                     <columns>
+                        <TableColumn fx:id="performanceTitleColumnphilosophy" prefWidth="509.0" text="PERFORMANCE TASK" />
+                        <TableColumn fx:id="performanceCheckedColumnphilosophy" minWidth="0.0" prefWidth="508.0" text="CHECKED" />
+                     </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </children>
+            </Pane>
+            <Pane fx:id="literaturepane" layoutX="49.0" layoutY="75.0" prefHeight="443.0" prefWidth="1054.0" style="-fx-background-radius: 8px; -fx-background-color: #fff; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 6,0,0,0);" visible="false">
+               <children>
+                  <Pane prefHeight="422.0" prefWidth="1087.0">
+                     <children>
+                        <Label alignment="CENTER" layoutX="220.0" prefHeight="34.0" prefWidth="624.0" text="21ST LITERATURE FROM THE PHILIPPINES AND THE WORLD">
+                           <font>
+                              <Font name="System Bold" size="21.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <TableView id="assignmenttable" fx:id="assignmentsTableliterature" layoutX="27.0" layoutY="33.0" prefHeight="253.0" prefWidth="511.0">
+                     <columns>
+                        <TableColumn fx:id="assignmentTitleColumnliterature" prefWidth="248.0" text="ASSIGNMENT" />
+                        <TableColumn fx:id="assignmentCheckedColumnliterature" minWidth="0.0" prefWidth="180.0" text="CHECKED" />
+                     </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+                  <TableView id="activitiestable" fx:id="activitiesTableliterature" layoutX="535.0" layoutY="33.0" prefHeight="253.0" prefWidth="511.0">
+                     <columns>
+                        <TableColumn fx:id="activityTitleColumnliterature" prefWidth="147.0" text="ACTIVITIES" />
+                        <TableColumn fx:id="activityCheckedColumnliterature" minWidth="0.0" prefWidth="285.0" text="CHECKED" />
+                     </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+                  <TableView id="performancetable" fx:id="performanceTableliterature" layoutX="27.0" layoutY="286.0" prefHeight="143.0" prefWidth="1019.0">
+                     <columns>
+                        <TableColumn fx:id="performanceTitleColumnliterature" prefWidth="508.0" text="PERFORMANCE TASK" />
+                        <TableColumn fx:id="performanceCheckedColumnliterature" minWidth="0.0" prefWidth="509.0" text="CHECKED" />
+                     </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Label fx:id="namelabel" layoutX="22.0" layoutY="530.0" prefHeight="19.0" prefWidth="144.0" visible="false" />
+   </children>
+</AnchorPane>

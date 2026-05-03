@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1198.0" style="-fx-background-color: white;" stylesheets="@styleabout.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="group1.system.aboutSystemController">
+   <children>
+      <ImageView fitHeight="942.0" fitWidth="1309.0" pickOnBounds="true" style="-fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 20, 0, 0, 0);">
+         <image>
+            <Image url="@../../image/blur.png" />
+         </image>
+      </ImageView>
+      <ScrollPane layoutX="-12.0" layoutY="29.0" prefHeight="671.0" prefWidth="1210.0" style="-fx-background-color: transparent;">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="855.0" prefWidth="1168.0">
+               <children>
+                  <ImageView fitHeight="855.0" fitWidth="1173.0" layoutX="11.0" layoutY="-1.0" opacity="0.94" pickOnBounds="true">
+                     <image>
+                        <Image url="@../../image/background2.png" />
+                     </image>
+                  </ImageView>
+                  <Button id="backbutton" layoutX="11.0" mnemonicParsing="false" onAction="#loadlogin" prefHeight="87.0" prefWidth="96.0" stylesheets="@styleabout.css">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Label alignment="CENTER" layoutX="436.0" prefHeight="58.0" prefWidth="325.0" text="About Us" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="51.0" />
+                     </font>
+                  </Label>
+                  <Text fill="WHITE" fontSmoothingType="LCD" layoutX="23.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ComGods is a group of committed ICT students from ICT 12-B that desire to change the way that education is provided. We are driven to create and succeed in developing solutions that satisfy the needs of today's educators and learners by our broad skill sets and cooperative approach." textAlignment="JUSTIFY" wrappingWidth="555.193359375">
+                     <font>
+                        <Font name="Yu Gothic Regular" size="26.0" />
+                     </font>
+                  </Text>
+                  <ImageView id="#group" fx:id="group" fitHeight="393.0" fitWidth="684.0" layoutX="598.0" layoutY="102.0" onMousePressed="#imageViewPressed" onMouseReleased="#imageViewReleased" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../image/sheesh.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton fx:id="helpfeedbackbutton" alignment="CENTER" layoutX="23.0" layoutY="751.0" onAction="#sendFeedback" opacity="0.55" prefHeight="60.0" prefWidth="235.0" style="-fx-background-color: pink;" text="Help &amp; Feedback">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+      <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.94" prefHeight="33.0" prefWidth="1198.0">
+         <children>
+            <Button id="minimizebutton" fx:id="minimizebutton" layoutX="1124.0" layoutY="-1.0" mnemonicParsing="false" onMouseClicked="#minimize_clicked" prefHeight="35.0" prefWidth="37.0" stylesheets="@styleabout.css">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button id="closebutton" fx:id="exit" layoutX="1161.0" layoutY="-1.0" mnemonicParsing="false" onAction="#close" prefHeight="35.0" prefWidth="37.0" stylesheets="@styleabout.css">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
